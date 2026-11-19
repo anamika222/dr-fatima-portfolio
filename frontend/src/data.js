@@ -1,13 +1,15 @@
 // Fallback content so the site renders even before the API is connected.
 export const PROFILE = {
   name: "Dr. Fatima Sultana",
-  title: "Orthopaedic & Spine Specialist",
-  tagline: "Orthopaedic, Spine & Trauma Specialist | Expert in Bone, Joint & Spine Care",
+  title: "Orthopaedic & Spine Surgeon",
+  tagline: "Orthopaedic & Spine Surgeon | Consultant, BIHS General Hospital",
   phone: "01921-196202",
   facebook_url: "", // paste the Facebook page URL here
   qualifications: [
     { degree: "MBBS", institution: "Dhaka" },
     { degree: "D Ortho", institution: "BSMMU" },
+    { degree: "Basic Spine Course", institution: "APSS" },
+    { degree: "Advanced Endoscopic Spine Course", institution: "AO Spine, Thailand" },
   ],
 };
 
@@ -25,14 +27,39 @@ export const SERVICES = [
 ].map(([title, icon, category, summary, conditions], i) => ({ id: i + 1, slug: String(i + 1), title, icon, category, summary, conditions }));
 
 export const STATS = [
-  { id: 1, label: "Hospitals", value: 2, suffix: "" },
+  { id: 1, label: "Chambers", value: 3, suffix: "" },
   { id: 2, label: "Care areas", value: 10, suffix: "" },
-  { id: 3, label: "Degrees", value: 2, suffix: "" },
+  { id: 3, label: "Degrees & Courses", value: 4, suffix: "" },
 ];
 
 export const FAQS = [];
 
 export const LOCATIONS = [
-  { id: 1, name: "Green Life Medical College Hospital", role: "Registrar", city: "Dhaka", address: "", map_url: "", accepts_bookings: true },
-  { id: 2, name: "Medison Specialized Hospital & Trauma Centre", role: "Consultant", city: "Dhaka", address: "", map_url: "", accepts_bookings: true },
+  { 
+    id: 1, 
+    name: "BIHS General Hospital", 
+    role: "Consultant", 
+    city: "Dhaka", 
+    address: "125/1 Darus Salam (Technical Mor), Mirpur, Dhaka-1216", 
+    map_url: "", 
+    accepts_bookings: true 
+  },
+  { 
+    id: 2, 
+    name: "Medison Specialized Hospital & Trauma Center", 
+    role: "Consultant", 
+    city: "Patuakhali", 
+    address: "49, Sher-e-Bangla Road, Patuakhali, Bangladesh, 8600", 
+    map_url: "", 
+    accepts_bookings: true 
+  },
+  { 
+    id: 3, 
+    name: "Purnima Diagnostic Center, Patuakhali", 
+    role: "Consultant", 
+    city: "Patuakhali", 
+    address: "Medical College Hospital Road, Patuakhali", 
+    map_url: "", 
+    accepts_bookings: true 
+  },
 ];
