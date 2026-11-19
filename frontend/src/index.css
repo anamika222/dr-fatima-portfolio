@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-white font-sans text-ink antialiased; }
+:focus-visible { outline: 3px solid #12A4C6; outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition-colors; }
+  .btn-primary { @apply bg-deep text-white hover:bg-ink; }
+  .btn-ghost { @apply border border-deep/25 text-deep hover:bg-cyan-soft; }
+  .field { @apply w-full rounded-xl border border-ink/15 bg-white px-4 py-3 outline-none focus:border-cyan; }
+  .section { @apply mx-auto max-w-6xl px-5 py-20 md:py-28; }
+}
+
+@layer components {
+  .btn-glow { position: relative; }
+  .btn-glow::after { content: ""; position: absolute; inset: 0; border-radius: inherit; animation: glow 2.4s ease-out infinite; pointer-events: none; }
+  .glass { @apply border border-white/60 bg-white/55 backdrop-blur-xl; }
+}
+@keyframes glow { 0% { box-shadow: 0 0 0 0 rgba(18,164,198,.55); } 100% { box-shadow: 0 0 0 18px rgba(18,164,198,0); } }
+@media (prefers-reduced-motion: reduce) { .btn-glow::after { animation: none; } }
